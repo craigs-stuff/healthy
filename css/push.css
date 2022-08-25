@@ -1,0 +1,159 @@
+a#burger {
+    position: absolute; 
+}
+
+a#logo{
+    width: auto;
+    height: 100%;
+    left: 1.7rem;
+    top: 0.7rem;
+    display: block;
+}
+
+#logo img {
+    height: 30px;
+    width: auto;
+    position: relative;
+    top: 1.3rem;
+    left: 2rem;
+}
+
+a#burger{
+    width: 50px;
+    height: 50px;
+    right: 1rem;
+    top: 0.9rem;
+}
+
+.topNav{
+    position: absolute;
+    right:2rem;
+}
+
+.topNav ul{
+    list-style-type: none;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+.topNav li{
+    display:inline;
+}
+
+nav.navContainer{
+    padding:0;
+    height: 4.2rem;
+    position: fixed;
+    border: none;
+    background-color:transparent;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    transition: all 0.2s;
+}
+
+nav.navContainer a{
+    text-decoration: none;
+}
+
+.navContainer.navShrink,.navContainer.navShrinkPage{
+    box-shadow: 0 1px 6px 0 rgb(0 0 0 / 3%);
+    background-color:#0e0e0e;
+    color:#fff;
+}
+
+
+ 
+@media screen and (max-width:850px) {
+
+    
+    .topNav {
+        overflow: hidden;
+        text-align: right;
+        background-color: transparent;
+        font-size: 17px;
+        top: 1rem;
+    }
+    
+    a#logo{
+        left: 1.2rem;
+        top: 0.8rem;
+    }
+    
+    a#burger{
+        right:1rem;
+        top: 0.6rem;
+        display:none;
+    }
+
+    a#burger{
+        display: block;
+    }
+      
+    .topNav ul li a {display: none;}
+
+
+    .topNav.responsive {
+        position: relative;
+        background-color:#202020;
+        top: 0rem;
+        padding: 2rem 1.5rem;
+        right:0;
+        z-index: 999;
+        height: 100vh;
+    }
+
+    .topNav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+        color:#fff;
+        padding: 0.5rem;
+        border-bottom: solid 1px #404040;
+    }
+
+}
+@media screen and (min-width:851px){
+    a#burger{
+        display: none;
+    }
+
+    .topNav{
+        top: 1.2rem;
+    }
+
+    .topNav a{
+        color:#fff;
+        margin: 0 0.7rem;
+        font-weight: bold;
+    }
+
+    .topNav a:hover{
+        border-bottom:solid 2px #ffffff;
+    }
+
+    nav.navContainer{
+        background-color: transparent;
+    }
+}
+
+@media screen and (min-width:100px) and (max-width: 280px) {
+    
+    /* font for small devices */
+    a#logo{
+        width:100px;
+    }
+
+    a#logo img{
+        width:100%;
+    }
+}
+
+
+/* add highlight to current page link */
+nav a.activePage{
+    color:#fff;
+    border-bottom:2px solid #ffffff;
+}
